@@ -1,21 +1,22 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:200,300,400");
+@import url("https://fonts.googleapis.com/css?family=Abel|Raleway:300,400");
 body {
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
   margin: 0 auto;
   padding: 0 auto;
   position: relative;
-  font-family: 'Montserrat', sans-serif; }
+  background-image: linear-gradient(to bottom right, rgba(150, 150, 150, 0.65), rgba(200, 200, 200, 0.5)); }
 
 .container-fluid {
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
   margin: 0 !important;
   padding: 0 !important;
-  background: url("img/aj.png") center bottom no-repeat/cover;
-  bottom: 0;
+  background: url("img/aj.png") right bottom no-repeat/cover;
   position: fixed;
   z-index: 0;
   height: 100%;
-  background-size: 85%; }
+  background-size: 95vh; }
   .container-fluid:before {
     content: '';
     position: absolute;
@@ -23,4 +24,29 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: linear-gradient(to bottom right, rgba(150, 150, 150, 0.5), rgba(200, 200, 200, 0.5)); }
+    display: flex;
+    text-align: center;
+    vertical-align: center;
+    justify-content: center; }
+  .container-fluid div {
+    background-image: linear-gradient(to bottom right, rgba(150, 150, 150, 0.65), rgba(200, 200, 200, 0.5));
+    height: 100%;
+    z-index: 5;
+    display: block;
+    padding-top: 35vh; }
+    .container-fluid div h1, .container-fluid div h2, .container-fluid div h3 {
+      z-index: 5;
+      display: block;
+      width: 100%;
+      height: auto;
+      text-align: center;
+      color: #ffffff;
+      text-shadow: 1px 1px 0px #3977fd; }
+    .container-fluid div h1 {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 400; }
+    .container-fluid div h2 {
+      font-family: 'Abel', sans-serif; }
+    .container-fluid div h3 {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 300; }
