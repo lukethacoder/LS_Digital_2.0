@@ -1,8 +1,24 @@
 @import url('https://fonts.googleapis.com/css?family=Abel|Raleway:300,400');
 
-$g_01: rgba(150, 150, 150, .65);
-$g_02: rgba(200, 200, 200, .5);
+$c_01: rgb(51, 51, 51);
+$g_01: rgba(120, 120, 120, .65);
+$g_02: rgba(220, 220, 220, .65);
 
+
+$lndkn_01: rgba(0,119,181,1);
+$lndkn_02: rgba(0,160,220,1);
+$fb_01: rgba(59,89,152,1);
+$fb_02: rgba(59,89,152,1);
+
+$git_01: rgba(110,84,148,1);
+$git_02: rgba(51,51,51,1);
+$behance_01: #1769ff;
+$behance_02: #191919;
+$_500px_01: #0099e5;
+$spotify_01: #1db954;
+$spotify_02: #191414;
+$email_01: #f83600;
+$email_02: #fe8c00;
 
 body {
     width: 100vw;
@@ -24,7 +40,8 @@ body {
     z-index:0;
       height:100%;
       background-size: 95vh;
-    &:before {
+    &:after {
+        z-index: 0;
         content: '';
         position: absolute;
         top: 0;
@@ -32,39 +49,187 @@ body {
         bottom: 0;
         left: 0;
         // background-image: linear-gradient(to bottom right,$g_01,$g_02);
-        display: flex;
-        text-align: center;
-        vertical-align: center;
-        justify-content: center;
     }
-    div {
+    .row {
         background-image: linear-gradient(to bottom right,$g_01,$g_02);
         height: 100%;
+        width: 100%;
+        margin: 0;
         z-index: 5;
-        display: block;
-        padding-top: 35vh;
-        h1, h2, h3 {
-            z-index: 5;
+        
+        div {
+            width: 25%;
+            margin: 0 auto;
+            margin-top: 23vh;
             display: block;
-            width: 100%;
-            height: auto;
-            text-align: center;
-            color: #ffffff;
-            text-shadow: 1px 1px 0px #3977fd;
+            z-index: 5;
+            img {
+                width: 100%;
+                margin: auto;
+                float: left;
+            }
+            ul {
+                z-index: 500;
+                width: 100%;
+                float: left;
+                text-align: center;
+                list-style: none;
+                margin-top: 25px;
+                margin-left: -35px;
+                
+                a {
+                    width: 200px;
+                    display: block;
+                    text-decoration: none;
+                    margin: 0 auto;
+                    padding: 0;
+                    li {
+                        font-family: 'Abel', sans-serif;
+                        text-decoration: none;
+                        color: $c_01;
+                        background-color: none;
+                        background: none;
+                        font-size: 24px;
+                        margin: 2px;
+                        padding: 0;
+                        &:hover {
+                            transition: 0.25s ease-in-out;
+                            -moz-transition: 0.25s ease-in-out;
+                            -webkit-transition: 0.25s ease-in-out;
+                        }
+                    }
+                    
+                    
+                }
+                a:nth-child(1) li:hover {
+                    background-color: $git_01;
+                    color: #ffffff;
+                }
+                a:nth-child(2) li:hover {
+                    background-color: $fb_01;
+                    color: #ffffff;
+                }
+                a:nth-child(3) li:hover {
+                    background-color: #8a8a8a;
+                    color: #ffffff;
+                    
+                }
+                // a:nth-child(3) li {
+                //     background: rgba(0, 0, 0, 0);
+                //     &:hover {
+                //         transition: 0.25s ease-in-out;
+                //         -moz-transition: 0.25s ease-in-out;
+                //         -webkit-transition: 0.25s ease-in-out;
+                //         background:
+                //         radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%),
+                //         radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%),
+                //         // left top
+                //         radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%),
+                //         radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%),
+                //         //  right top
+                //         radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%),
+                //         radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%),
+                //         // right bottom
+                //         radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent),
+                    
+                //         /////// create a base coat to smooth
+                //         /////// corner gradients
+                //         linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+                //     }
+                // }
+                a:nth-child(4) li:hover {
+                    background-color: $lndkn_01;
+                    color: #ffffff;
+                }
+                a:nth-child(5) li:hover {
+                    background-color: $c_01;
+                    color: #ffffff;
+                }
+                
+                
+                
+            }
         }
-        h1 {
-            font-family: 'Raleway', sans-serif;
-            font-weight: 400;
-        }
-        h2 {
-            font-family: 'Abel', sans-serif;
-        }
-        h3 {
-            font-family: 'Raleway', sans-serif;
-            font-weight: 300;
-        }
+        
     }
     
 
 }
 
+@media (max-width: 765px) {
+    .container-fluid {
+        .row {
+            div {
+                width: 50%;
+                margin-top: 23vh;
+                img {
+                    width: 100%;
+                }
+                ul {
+                    z-index: 60%;
+                    width: 100%;
+                    margin-top: 25px;
+                    margin-left: -25px;
+                    
+                    a {
+                        width: 100%;
+                        display: block;
+                        text-decoration: none;
+                        margin: 0 auto;
+                        padding: 0;
+                        li {
+                            font-family: 'Abel', sans-serif;
+                            text-decoration: none;
+                            color: $c_01;
+                            background-color: none;
+                            background: none;
+                            font-size: 24px;
+                            margin: 2px;
+                            padding: 0;
+                        }
+                        
+                        
+                    }                   
+                 }
+            }
+        }
+    }
+}
+@media (min-width: 2560px) {
+    .container-fluid {
+        .row {
+            div {
+                width: 25%;
+                margin-top: 23vh;
+                img {
+                    width: 100%;
+                }
+                ul {
+                    width: 100%;
+                    margin-top: 25px;
+                    margin-left: -35px;
+                    
+                    a {
+                        width: 100%;
+                        display: block;
+                        text-decoration: none;
+                        margin: 0 auto;
+                        padding: 0;
+                        li {
+                            font-family: 'Abel', sans-serif;
+                            text-decoration: none;
+                            color: $c_01;
+                            background-color: none;
+                            background: none;
+                            font-size: 32px;
+                            margin: 2px;
+                            padding: 0;
+                        }
+                        
+                        
+                    }                   
+                 }
+            }
+        }
+    }
+}
